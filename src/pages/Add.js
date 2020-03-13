@@ -2,6 +2,7 @@ import React from 'react';
 import './Add.css';
 import { Link } from 'react-router-dom';
 import Title from '../components/Title';
+import Button from '../components/Button';
 
 export default function Add() {
   return (
@@ -178,10 +179,12 @@ export default function Add() {
             </label>
           </li>
         </ul>
+        <Link to="/thanks">
+          <Button type="submit" link to="/thanks">
+            ⇢ Ab geht's!
+          </Button>
+        </Link>
       </form>
-      <p>
-        <Link to="/thanks">Thank you!</Link>
-      </p>
     </div>
   );
 }
