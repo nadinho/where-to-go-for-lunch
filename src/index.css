@@ -6,5 +6,8 @@
 
 body {
   margin: 0;
+  height: 100vh;
   font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  background: #fcfcfc;
 }
