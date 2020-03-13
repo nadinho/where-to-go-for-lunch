@@ -11,14 +11,14 @@ export default function Add() {
         Wir freuen uns, wenn du deine neueste Entdeckung mit uns und der
         Community teilst!
       </p>
-      <form class="form">
+      <form className="form">
         <p className="formHeadings">Wie heißt das Lokal/Restarant/etc.?</p>
-        <input class="restaurantName" placeholder="Name des Ortes"></input>
+        <input className="restaurantName" placeholder="Name des Ortes"></input>
 
         <p className="formHeadings">Welche Küche gibt es dort?</p>
         <p className="multipleText">Mehrfachnennungen möglich</p>
 
-        <ul class="multipleChoicesBox">
+        <ul className="multipleChoicesBox">
           <li>
             <input
               type="checkbox"
@@ -82,7 +82,7 @@ export default function Add() {
         <p className="formHeadings">Besonderheiten</p>
         <p className="multipleText">Mehrfachnennungen möglich</p>
 
-        <ul class="multipleChoicesBox">
+        <ul className="multipleChoicesBox">
           <li>
             <input
               type="checkbox"
@@ -172,9 +172,9 @@ export default function Add() {
               name="Preis"
             ></input>
             <label for="teuer">
-              <i class="fas fa-euro-sign"></i>
-              <i class="fas fa-euro-sign"></i>
-              <i class="fas fa-euro-sign"></i>
+              <i className="fas fa-euro-sign"></i>
+              <i clasNames="fas fa-euro-sign"></i>
+              <i className="fas fa-euro-sign"></i>
             </label>
           </li>
         </ul>
