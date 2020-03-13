@@ -20,31 +20,61 @@ export default function Add() {
 
         <ul class="multipleChoicesBox">
           <li>
-            <input type="checkbox" id="it" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="it"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="it">Italienisch</label>
           </li>
 
           <li>
-            <input type="checkbox" id="de" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="de"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="de">Deutsch</label>
           </li>
           <li>
-            <input type="checkbox" id="or" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="or"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="or">Orientalisch</label>
           </li>
 
           <li>
-            <input type="checkbox" id="as" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="as"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="as">Asiatisch</label>
           </li>
 
           <li>
-            <input type="checkbox" id="am" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="am"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="am">Amerikanisch</label>
           </li>
 
           <li>
-            <input type="checkbox" id="sp" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="sp"
+              className="checkbox"
+              name="kitchen"
+            ></input>
             <label for="sp">Spanisch</label>
           </li>
         </ul>
@@ -54,27 +84,57 @@ export default function Add() {
 
         <ul class="multipleChoicesBox">
           <li>
-            <input type="checkbox" id="vegan" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="vegan"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="vegan">vegan</label>
           </li>
           <li>
-            <input type="checkbox" id="veggi" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="veggi"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="veggi">vegetarisch</label>
           </li>
           <li>
-            <input type="checkbox" id="glu" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="glu"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="glu">glutenfrei</label>
           </li>
           <li>
-            <input type="checkbox" id="lact" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="lact"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="lact">lactosefrei</label>
           </li>
           <li>
-            <input type="checkbox" id="fru" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="fru"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="fru">frutarisch</label>
           </li>
           <li>
-            <input type="checkbox" id="kl" className="checkbox"></input>
+            <input
+              type="checkbox"
+              id="kl"
+              className="checkbox"
+              name="special"
+            ></input>
             <label for="kl">kalorienarm</label>
           </li>
         </ul>
