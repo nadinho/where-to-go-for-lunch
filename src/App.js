@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header></Header>
       <Searchbar></Searchbar>
-      <main>
+      <main class="main">
         <Switch>
           <Route exact path="/">
             <Start />
