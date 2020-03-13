@@ -1,0 +1,11 @@
+.header {
+  padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+  word-wrap: break-word;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
