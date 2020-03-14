@@ -10,9 +10,8 @@ export default function Add() {
   const [fieldSpecial, setFieldSpecial] = React.useState('');
   const [fieldMoney, setFieldMoney] = React.useState('');
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(handleSubmit(event));
 
     const formular = {
       fieldRestaurant: fieldRestaurant,
@@ -21,7 +20,15 @@ export default function Add() {
       fieldMoney: fieldMoney
     };
 
-    alert(JSON.stringify(formular));
+    const response = await fetch('http://localhost:4000/formular', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formular)
+    });
+    await response.json();
+    alert(`Das hat geklappt!`);
   }
 
   return (
@@ -53,7 +60,7 @@ export default function Add() {
               name="italienisch"
               value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Italienisch</label>
@@ -64,9 +71,9 @@ export default function Add() {
               type="checkbox"
               className="checkbox"
               name="deutsch"
-              value="{fieldKitchen}"
+              value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Deutsch</label>
@@ -78,7 +85,7 @@ export default function Add() {
               name="orientalisch"
               value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Orientalisch</label>
@@ -91,7 +98,7 @@ export default function Add() {
               name="asiatisch"
               value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Asiatisch</label>
@@ -104,7 +111,7 @@ export default function Add() {
               name="amerikanisch"
               value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Amerikanisch</label>
@@ -117,7 +124,7 @@ export default function Add() {
               name="spanisch"
               value={fieldKitchen}
               onChange={event => {
-                setFieldKitchen(event.target.value);
+                setFieldKitchen(event.target.name);
               }}
             ></input>
             <label>Spanisch</label>
@@ -135,7 +142,7 @@ export default function Add() {
               name="vegan"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>vegan</label>
@@ -147,7 +154,7 @@ export default function Add() {
               name="vegetarisch"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>vegetarisch</label>
@@ -159,7 +166,7 @@ export default function Add() {
               name="glutenfrei"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>glutenfrei</label>
@@ -171,7 +178,7 @@ export default function Add() {
               name="lactosefrei"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>lactosefrei</label>
@@ -183,7 +190,7 @@ export default function Add() {
               name="frutarisch"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>frutarisch</label>
@@ -195,7 +202,7 @@ export default function Add() {
               name="kalorienarm"
               value={fieldSpecial}
               onChange={event => {
-                setFieldSpecial(event.target.value);
+                setFieldSpecial(event.target.name);
               }}
             ></input>
             <label>kalorienarm</label>
@@ -211,7 +218,7 @@ export default function Add() {
               name="billig"
               value={fieldMoney}
               onChange={event => {
-                setFieldMoney(event.target.value);
+                setFieldMoney(event.target.name);
               }}
             ></input>
             <label>
@@ -225,7 +232,7 @@ export default function Add() {
               name="mittel"
               value={fieldMoney}
               onChange={event => {
-                setFieldMoney(event.target.value);
+                setFieldMoney(event.target.name);
               }}
             ></input>
             <label>
@@ -240,7 +247,7 @@ export default function Add() {
               name="teuer"
               value={fieldMoney}
               onChange={event => {
-                setFieldMoney(event.target.value);
+                setFieldMoney(event.target.name);
               }}
             ></input>
             <label>
@@ -250,11 +257,11 @@ export default function Add() {
             </label>
           </li>
         </ul>
-        <Link to="/thanks">
-          <Button type="submit" link to="/thanks">
-            ⇢ Ab geht's!
-          </Button>
-        </Link>
+        {/* <Link to="/thanks"> */}
+        <Button type="submit" link to="/thanks">
+          ⇢ Ab geht's!
+        </Button>
+        {/* </Link> */}
       </form>
     </div>
   );
