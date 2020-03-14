@@ -1,6 +1,6 @@
 import React from 'react';
 import './Add.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
 
@@ -20,13 +20,16 @@ export default function Add() {
       fieldMoney: fieldMoney
     };
 
-    const response = await fetch('http://localhost:4000/formular', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formular)
-    });
+    const response = await fetch(
+      REACT_APP_FORMULAR_API || 'http://localhost:4000/formular',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formular)
+      }
+    );
     await response.json();
     alert(`Das hat geklappt!`);
   }
