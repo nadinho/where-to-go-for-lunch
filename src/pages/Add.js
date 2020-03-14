@@ -49,84 +49,78 @@ export default function Add() {
           <li>
             <input
               type="checkbox"
-              id="it"
               className="checkbox"
-              name="kitchen"
+              name="italienisch"
               value={fieldKitchen}
               onChange={event => {
                 setFieldKitchen(event.target.value);
               }}
             ></input>
-            <label for="it">Italienisch</label>
+            <label>Italienisch</label>
           </li>
 
           <li>
             <input
               type="checkbox"
-              id="de"
               className="checkbox"
-              name="kitchen"
+              name="deutsch"
               value="{fieldKitchen}"
               onChange={event => {
                 setFieldKitchen(event.target.value);
               }}
             ></input>
-            <label for="de">Deutsch</label>
+            <label>Deutsch</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="or"
               className="checkbox"
-              name="kitchen"
+              name="orientalisch"
               value={fieldKitchen}
               onChange={event => {
                 setFieldKitchen(event.target.value);
               }}
             ></input>
-            <label for="or">Orientalisch</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="as"
-              className="checkbox"
-              name="kitchen"
-              value={fieldKitchen}
-              onChange={event => {
-                setFieldKitchen(event.target.value);
-              }}
-            ></input>
-            <label for="as">Asiatisch</label>
+            <label>Orientalisch</label>
           </li>
 
           <li>
             <input
               type="checkbox"
-              id="am"
               className="checkbox"
-              name="kitchen"
+              name="asiatisch"
               value={fieldKitchen}
               onChange={event => {
                 setFieldKitchen(event.target.value);
               }}
             ></input>
-            <label for="am">Amerikanisch</label>
+            <label>Asiatisch</label>
           </li>
 
           <li>
             <input
               type="checkbox"
-              id="sp"
               className="checkbox"
-              name="kitchen"
+              name="amerikanisch"
               value={fieldKitchen}
               onChange={event => {
                 setFieldKitchen(event.target.value);
               }}
             ></input>
-            <label for="sp">Spanisch</label>
+            <label>Amerikanisch</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              className="checkbox"
+              name="spanisch"
+              value={fieldKitchen}
+              onChange={event => {
+                setFieldKitchen(event.target.value);
+              }}
+            ></input>
+            <label>Spanisch</label>
           </li>
         </ul>
 
@@ -137,80 +131,74 @@ export default function Add() {
           <li>
             <input
               type="checkbox"
-              id="vegan"
               className="checkbox"
-              name="special"
+              name="vegan"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="vegan">vegan</label>
+            <label>vegan</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="veggi"
               className="checkbox"
-              name="special"
+              name="vegetarisch"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="veggi">vegetarisch</label>
+            <label>vegetarisch</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="glu"
               className="checkbox"
-              name="special"
+              name="glutenfrei"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="glu">glutenfrei</label>
+            <label>glutenfrei</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="lact"
               className="checkbox"
-              name="special"
+              name="lactosefrei"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="lact">lactosefrei</label>
+            <label>lactosefrei</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="fru"
               className="checkbox"
-              name="special"
+              name="frutarisch"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="fru">frutarisch</label>
+            <label>frutarisch</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="kl"
               className="checkbox"
-              name="special"
+              name="kalorienarm"
               value={fieldSpecial}
               onChange={event => {
                 setFieldSpecial(event.target.value);
               }}
             ></input>
-            <label for="kl">kalorienarm</label>
+            <label>kalorienarm</label>
           </li>
         </ul>
 
@@ -219,48 +207,45 @@ export default function Add() {
           <li>
             <input
               type="radio"
-              id="billig"
               className="checkbox"
-              name="Preis"
+              name="billig"
               value={fieldMoney}
               onChange={event => {
                 setFieldMoney(event.target.value);
               }}
             ></input>
-            <label for="billig">
-              <i class="fas fa-euro-sign"></i>
-            </label>
-          </li>
-          <li>
-            <input
-              type="radio"
-              id="mittel"
-              className="checkbox"
-              name="Preis"
-              value={fieldMoney}
-              onChange={event => {
-                setFieldMoney(event.target.value);
-              }}
-            ></input>
-            <label for="mittel">
-              <i class="fas fa-euro-sign"></i>
-              <i class="fas fa-euro-sign"></i>
-            </label>
-          </li>
-          <li>
-            <input
-              type="radio"
-              id="teuer"
-              className="checkbox"
-              name="Preis"
-              value={fieldMoney}
-              onChange={event => {
-                setFieldMoney(event.target.value);
-              }}
-            ></input>
-            <label for="teuer">
+            <label>
               <i className="fas fa-euro-sign"></i>
-              <i clasNames="fas fa-euro-sign"></i>
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              className="checkbox"
+              name="mittel"
+              value={fieldMoney}
+              onChange={event => {
+                setFieldMoney(event.target.value);
+              }}
+            ></input>
+            <label>
+              <i class="fas fa-euro-sign"></i>
+              <i class="fas fa-euro-sign"></i>
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              className="checkbox"
+              name="teuer"
+              value={fieldMoney}
+              onChange={event => {
+                setFieldMoney(event.target.value);
+              }}
+            ></input>
+            <label>
+              <i className="fas fa-euro-sign"></i>
+              <i classNames="fas fa-euro-sign"></i>
               <i className="fas fa-euro-sign"></i>
             </label>
           </li>
