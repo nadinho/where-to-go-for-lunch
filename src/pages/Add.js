@@ -12,6 +12,7 @@ export default function Add() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log(handleSubmit(event));
 
     const formular = {
       fieldRestaurant: fieldRestaurant,
