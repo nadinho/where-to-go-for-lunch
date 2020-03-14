@@ -1,0 +1,53 @@
+{
+  "formular": [
+    {
+      "id": 1,
+      "fieldRestarant": "Venezia",
+      "fieldKitchen": "italienisch",
+      "fieldSpecial": "vegetarisch",
+      "fieldMoney": "€"
+    },
+    {
+      "fieldRestaurant": "Venezia",
+      "fieldKitchen": "",
+      "fieldSpecial": "",
+      "fieldMoney": "",
+      "id": 2
+    },
+    {
+      "fieldRestaurant": "Venezia",
+      "fieldKitchen": "",
+      "fieldSpecial": "",
+      "fieldMoney": "",
+      "id": 3
+    },
+    {
+      "fieldRestaurant": "Venezia",
+      "fieldKitchen": "",
+      "fieldSpecial": "",
+      "fieldMoney": "",
+      "id": 4
+    },
+    {
+      "fieldRestaurant": "Venezia",
+      "fieldKitchen": "on",
+      "fieldSpecial": "",
+      "fieldMoney": "",
+      "id": 5
+    },
+    {
+      "fieldRestaurant": "Venezia",
+      "fieldKitchen": "italienisch",
+      "fieldSpecial": "",
+      "fieldMoney": "",
+      "id": 6
+    },
+    {
+      "fieldRestaurant": "F24",
+      "fieldKitchen": "orientalisch",
+      "fieldSpecial": "vegetarisch",
+      "fieldMoney": "teuer",
+      "id": 7
+    }
+  ]
+}
