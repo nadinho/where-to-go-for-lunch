@@ -1,6 +1,6 @@
 import React from 'react';
 import './Add.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
 
@@ -31,7 +31,6 @@ export default function Add() {
       }
     );
     await response.json();
-    alert(`Das hat geklappt!`);
   }
 
   return (
@@ -260,11 +259,9 @@ export default function Add() {
             </label>
           </li>
         </ul>
-        {/* <Link to="/thanks"> */}
-        <Button type="submit" link to="/thanks">
-          ⇢ Ab geht's!
-        </Button>
-        {/* </Link> */}
+        <Link to="/thanks">
+          <Button type="submit">⇢ Ab geht's!</Button>
+        </Link>
       </form>
     </div>
   );
