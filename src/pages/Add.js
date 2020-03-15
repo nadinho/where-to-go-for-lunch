@@ -21,7 +21,7 @@ export default function Add() {
     };
 
     const response = await fetch(
-      REACT_APP_FORMULAR_API || 'http://localhost:4000/formular',
+      process.env.REACT_APP_FORMULAR_API || 'http://localhost:4000/formular',
       {
         method: 'POST',
         headers: {
