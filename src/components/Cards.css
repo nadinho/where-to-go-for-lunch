@@ -1,0 +1,29 @@
+.card {
+  margin: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px grey;
+  background-color: #dcb042;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+
+.card--img {
+  border-radius: 15px 15px 0 0;
+  height: 300px;
+  width: 400px;
+}
+
+.card--footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.card--footer__name {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
