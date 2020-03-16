@@ -1,4 +1,5 @@
 import React from 'react';
+import GlobalStyles from './Globalstyles';
 import Header from './components/Header';
 import Searchbar from './components/Searchbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -11,9 +12,10 @@ const Main = styled.main`
   padding: 30px;
 `;
 
-function App() {
+const App = () => {
   return (
     <Router>
+      <GlobalStyles />
       <Header></Header>
       <Searchbar></Searchbar>
       <Main>
@@ -31,6 +33,6 @@ function App() {
       </Main>
     </Router>
   );
-}
+};
 
 export default App;
