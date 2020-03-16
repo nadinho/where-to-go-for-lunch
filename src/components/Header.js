@@ -1,12 +1,23 @@
 import React from 'react';
-import './Header.css';
+import styled from '@emotion/styled';
 
-export default function Header() {
+const Header = styled.header`
+  padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Title = styled.h1`
+  text-transform: uppercase;
+  font-weight: 900;
+`;
+
+export default function AppHeader() {
   return (
-    <header className="header">
-      <h1 className="title">
+    <Header>
+      <Title>
         Find the best places <br></br>for your lunch
-      </h1>
-    </header>
+      </Title>
+    </Header>
   );
 }

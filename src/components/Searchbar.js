@@ -1,12 +1,25 @@
 import React from 'react';
-import './Searchbar.css';
+import styled from '@emotion/styled';
 
-export default function Searchbar() {
+const Searchbar = styled.input`
+  width: 100%;
+  height: 10vh;
+  border: none;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300i;
+  background-color: #f9f4e8;
+  &:placeholdercolor {
+    color: #bebdbd;
+  }
+`;
+
+export default function Search() {
   return (
-    <input
+    <Searchbar
       type="search"
-      className="searchbar"
       placeholder="Suche nach deinem Ort für's Mittagessen... "
-    ></input>
+    ></Searchbar>
   );
 }

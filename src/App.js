@@ -1,18 +1,22 @@
 import React from 'react';
-import './App.css';
 import Header from './components/Header';
 import Searchbar from './components/Searchbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Thanks from './pages/Thanks';
 import Start from './pages/Start';
 import Add from './pages/Add';
+import styled from '@emotion/styled';
+
+const Main = styled.main`
+  padding: 30px;
+`;
 
 function App() {
   return (
     <Router>
       <Header></Header>
       <Searchbar></Searchbar>
-      <main className="main">
+      <Main>
         <Switch>
           <Route exact path="/">
             <Start />
@@ -24,7 +28,7 @@ function App() {
             <Thanks />
           </Route>
         </Switch>
-      </main>
+      </Main>
     </Router>
   );
 }

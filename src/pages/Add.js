@@ -1,8 +1,9 @@
 import React from 'react';
-import './Add.css';
 import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
+import PageText from '../components/PageText';
+import styled from '@emotion/styled';
 
 export default function Add() {
   const [fieldRestaurant, setFieldRestaurant] = React.useState('');
@@ -33,30 +34,77 @@ export default function Add() {
     await response.json();
   }
 
+  const Form = styled.form`
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `;
+
+  const FormHeading = styled.p`
+    font-weight: 500;
+    margin-top: 40px;
+    &::placeholder {
+      color: #bebdbd;
+    }
+  `;
+
+  const SmallText = styled.p`
+    margin-top: -10px;
+    font-size: small;
+  `;
+
+  const InputText = styled.input`
+    height: 50px;
+    width: 220px;
+    outline: none;
+    border: 1px solid #dcb042;
+    border-radius: 40px;
+    box-shadow: 0px 3px 6px #ddd;
+    font-size: 0.9rem;
+    text-align: center;
+  `;
+
+  const MultipleChoicesBox = styled.ul`
+    margin-top: -5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+  `;
+
+  const ChoicesItem = styled.li`
+    padding: 10px;
+  `;
+
+  const MultipleChoices = styled.input`
+    margin: 15px;
+  `;
+
   return (
-    <div>
-      <Title text="Coolen Ort entdeckt?"></Title>
-      <p className="text">
+    <>
+      <Title>Coolen Ort entdeckt?</Title>
+      <PageText>
         Wir freuen uns, wenn du deine neueste Entdeckung mit uns und der
         Community teilst!
-      </p>
-      <form className="form" onSubmit={handleSubmit}>
-        <p className="formHeadings">Wie heißt das Lokal/Restarant/etc.?</p>
-        <input
-          className="restaurantName"
+      </PageText>
+      <Form onSubmit={handleSubmit}>
+        <FormHeading>Wie heißt das Lokal/Restarant/etc.?</FormHeading>
+        <InputText
           placeholder="Name des Ortes"
           value={fieldRestaurant}
           onChange={event => {
             setFieldRestaurant(event.target.value);
           }}
-        ></input>
+        ></InputText>
 
-        <p className="formHeadings">Welche Küche gibt es dort?</p>
-        <p className="multipleText">Mehrfachnennungen möglich</p>
+        <FormHeading>Welche Küche gibt es dort?</FormHeading>
+        <SmallText>Mehrfachnennungen möglich</SmallText>
 
-        <ul className="multipleChoicesBox">
-          <li>
-            <input
+        <MultipleChoicesBox>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="italienisch"
@@ -64,12 +112,12 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Italienisch</label>
-          </li>
+          </ChoicesItem>
 
-          <li>
-            <input
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="deutsch"
@@ -77,11 +125,11 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Deutsch</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="orientalisch"
@@ -89,12 +137,12 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Orientalisch</label>
-          </li>
+          </ChoicesItem>
 
-          <li>
-            <input
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="asiatisch"
@@ -102,12 +150,12 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Asiatisch</label>
-          </li>
+          </ChoicesItem>
 
-          <li>
-            <input
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="amerikanisch"
@@ -115,12 +163,12 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Amerikanisch</label>
-          </li>
+          </ChoicesItem>
 
-          <li>
-            <input
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="spanisch"
@@ -128,17 +176,17 @@ export default function Add() {
               onChange={event => {
                 setFieldKitchen(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>Spanisch</label>
-          </li>
-        </ul>
+          </ChoicesItem>
+        </MultipleChoicesBox>
 
-        <p className="formHeadings">Besonderheiten</p>
-        <p className="multipleText">Mehrfachnennungen möglich</p>
+        <FormHeading>Besonderheiten</FormHeading>
+        <SmallText>Mehrfachnennungen möglich</SmallText>
 
-        <ul className="multipleChoicesBox">
-          <li>
-            <input
+        <MultipleChoicesBox>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="vegan"
@@ -146,11 +194,11 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>vegan</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="vegetarisch"
@@ -158,11 +206,11 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>vegetarisch</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="glutenfrei"
@@ -170,11 +218,11 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>glutenfrei</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="lactosefrei"
@@ -182,11 +230,11 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>lactosefrei</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="frutarisch"
@@ -194,11 +242,11 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>frutarisch</label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="checkbox"
               className="checkbox"
               name="kalorienarm"
@@ -206,15 +254,15 @@ export default function Add() {
               onChange={event => {
                 setFieldSpecial(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>kalorienarm</label>
-          </li>
-        </ul>
+          </ChoicesItem>
+        </MultipleChoicesBox>
 
-        <p className="formHeadings">Wie teuer ist es dort?</p>
-        <ul class="multipleChoicesBox">
-          <li>
-            <input
+        <FormHeading>Wie teuer ist es dort?</FormHeading>
+        <MultipleChoicesBox>
+          <ChoicesItem>
+            <MultipleChoices
               type="radio"
               className="checkbox"
               name="billig"
@@ -222,13 +270,13 @@ export default function Add() {
               onChange={event => {
                 setFieldMoney(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>
               <i className="fas fa-euro-sign"></i>
             </label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="radio"
               className="checkbox"
               name="mittel"
@@ -236,14 +284,14 @@ export default function Add() {
               onChange={event => {
                 setFieldMoney(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>
               <i class="fas fa-euro-sign"></i>
               <i class="fas fa-euro-sign"></i>
             </label>
-          </li>
-          <li>
-            <input
+          </ChoicesItem>
+          <ChoicesItem>
+            <MultipleChoices
               type="radio"
               className="checkbox"
               name="teuer"
@@ -251,18 +299,18 @@ export default function Add() {
               onChange={event => {
                 setFieldMoney(event.target.name);
               }}
-            ></input>
+            ></MultipleChoices>
             <label>
               <i className="fas fa-euro-sign"></i>
               <i classNames="fas fa-euro-sign"></i>
               <i className="fas fa-euro-sign"></i>
             </label>
-          </li>
-        </ul>
+          </ChoicesItem>
+        </MultipleChoicesBox>
         <Link to="/thanks">
           <Button type="submit">⇢ Ab geht's!</Button>
         </Link>
-      </form>
-    </div>
+      </Form>
+    </>
   );
 }
