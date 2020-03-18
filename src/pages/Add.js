@@ -44,6 +44,7 @@ export default function Add() {
   const FormHeading = styled.p`
     font-weight: 500;
     margin-top: 40px;
+    color: ${props => props.theme.colors.primary};
     &::placeholder {
       color: #bebdbd;
     }
@@ -52,13 +53,14 @@ export default function Add() {
   const SmallText = styled.p`
     margin-top: -10px;
     font-size: small;
+    color: ${props => props.theme.colors.color};
   `;
 
   const InputText = styled.input`
     height: 50px;
     width: 220px;
     outline: none;
-    border: 1px solid #dcb042;
+    border: 1px solid ${props => props.theme.colors.input};
     border-radius: 40px;
     box-shadow: 0px 3px 6px #ddd;
     font-size: 0.9rem;
@@ -72,6 +74,7 @@ export default function Add() {
     flex-wrap: wrap;
     align-items: center;
     width: 80%;
+    color: ${props => props.theme.colors.color};
   `;
 
   const ChoicesItem = styled.li`

@@ -9,9 +9,9 @@ const Searchbar = styled.input`
   font-size: 1.1rem;
   font-family: 'Rubik', sans-serif;
   font-weight: 300i;
-  background-color: #f9f4e8;
-  &:placeholdercolor {
-    color: #bebdbd;
+  background: ${props => props.theme.colors.darkGrey};
+  &::placeholder {
+    ${props => props.theme.colors.primary};
   }
 `;
 

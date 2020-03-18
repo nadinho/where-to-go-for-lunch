@@ -10,6 +10,7 @@ const Header = styled.header`
 const Title = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
+  color: ${props => props.theme.colors.secondary};
 `;
 
 export default function AppHeader() {

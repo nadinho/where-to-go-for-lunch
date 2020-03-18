@@ -5,7 +5,7 @@ const Card = styled.div`
   margin: 30px;
   border-radius: 15px;
   box-shadow: 0px 3px 10px grey;
-  background: #dcb042;
+  background: ${props => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
 

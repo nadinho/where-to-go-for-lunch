@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 const PageTitle = styled.h2(
   `
   font-size: 1.5rem;
+  color: ${props => props.theme.colors.primary};
   font-weight: 900;
   &::after {
     content: '';
