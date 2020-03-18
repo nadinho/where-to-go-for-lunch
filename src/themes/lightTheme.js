@@ -7,7 +7,8 @@ const lightTheme = {
     text: '#444',
     darkGrey: '#a9a9a9',
     lightGrey: '#bebdbd',
-    input: '#dcb042'
+    input: '#dcb042',
+    heading: '#000'
   }
 };
 

@@ -10,17 +10,23 @@ import Start from './pages/Start';
 import Add from './pages/Add';
 import styled from '@emotion/styled';
 import lightTheme from './themes/lightTheme';
+import darkTheme from './themes/darkTheme';
 
 const Main = styled.main`
   padding: 30px;
 `;
 
 const App = () => {
+  const [theme, setTheme] = React.useState(lightTheme);
   return (
     <Router>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header></Header>
+        <Header
+          onToggleClick={() => {
+            setTheme(theme === lightTheme ? darkTheme : lightTheme);
+          }}
+        ></Header>
         <Searchbar></Searchbar>
         <Main>
           <Switch>
