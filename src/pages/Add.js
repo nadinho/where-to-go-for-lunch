@@ -15,11 +15,17 @@ export default function Add() {
   const [fieldMoney, setFieldMoney] = React.useState('');
   const history = useHistory();
   const [isLoading, setIsLoading] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    setIsLoading(true);
+    try {
+      setIsLoading(true);
+    } catch (error) {
+      console.error('Received error', error.message);
+      setErrorMessage(error.message);
+    }
 
     const formular = {
       fieldRestaurant: fieldRestaurant,
@@ -32,6 +38,9 @@ export default function Add() {
     history.push('/Thanks');
   }
 
+  if (errorMessage) {
+    return <div>{errorMessage}</div>;
+  }
   if (isLoading) {
     return (
       <Div>

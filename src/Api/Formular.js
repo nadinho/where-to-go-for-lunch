@@ -10,5 +10,8 @@ export async function postFormular(formular) {
     },
     body: JSON.stringify(formular)
   });
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
   await response.json();
 }
