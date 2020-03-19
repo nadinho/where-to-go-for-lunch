@@ -23,7 +23,6 @@ export default function Add() {
     try {
       setIsLoading(true);
     } catch (error) {
-      console.error('Received error', error.message);
       setErrorMessage(error.message);
     }
 
