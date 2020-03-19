@@ -16,28 +16,51 @@ const Title = styled.h1`
   color: ${props => props.theme.colors.heading};
 `;
 
-const Toggle = styled.input`
-  display: none;
+const ToggleCheckbox = styled.input`
+  position: relative;
+  display: inline-block;
 `;
 
-const ToggleLabel = styled.label`
+const Toggle = styled.label`
   background-color: ${props => props.theme.colors.primary};
   display: inline-block;
   border-radius: 50px;
   cursor: pointer;
-
   position: relative;
-
   width: 50px;
   height: 20px;
+  transition: all 0.4s;
+`;
+
+const Slider = styled.span`
+  background-color: #bc2612;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: all 0.4s;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 14px;
+    left: 2px;
+    top: 2px;
+    background-color: #eee;
+    border-radius: 5px;
+    transition: all 0.4s;
+    &:checked {
+      transform: translateX(40px);
+    }
+  }
 `;
 
 export default function AppHeader({ onToggleClick }) {
   return (
     <Header>
-      <ToggleLabel>
-        <Toggle type="checkbox" onClick={onToggleClick} />
-      </ToggleLabel>
+      <Toggle>
+        <ToggleCheckbox type="checkbox" onClick={onToggleClick} />
+        <Slider></Slider>
+      </Toggle>
+
       <Title>
         Find the best places <br></br>for your lunch
       </Title>
