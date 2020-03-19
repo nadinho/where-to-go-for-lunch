@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 
-const Div = styled.div`
-display: flex;
+const FlexDiv = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
-}
 `;
 
-export default Div;
+export default FlexDiv;
