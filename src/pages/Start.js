@@ -1,15 +1,15 @@
 import React from 'react';
-import './Start.css';
 import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
 import Cards from '../components/Cards';
+import Div from '../components/Div';
 
 export default function Start() {
   return (
     <>
-      <Title text="Neue Orte"></Title>
-      <div className="div">
+      <Title>Neue Orte</Title>
+      <Div>
         <Cards
           url="https://scontent.fdtm2-1.fna.fbcdn.net/v/t1.0-9/67969911_705715566520487_2402551426313093120_n.jpg?_nc_cat=101&_nc_sid=dd9801&_nc_ohc=lKZCg73UPU0AX8KKTV1&_nc_ht=scontent.fdtm2-1.fna&oh=e9209a6d2d9d14b8ace1d702a1ee318f&oe=5E941B7F"
           name="Olafs"
@@ -37,14 +37,12 @@ export default function Start() {
           kitchen="deutsch"
           special="vegetarisch"
           price="€€"
-          href="www.schmackes-dortmund.de"
-          homepage="www.schmackes-dortmund.de"
         ></Cards>
         <Button type="text">⇢ Mehr Orte</Button>
         <Link to="/add">
           <Button type="text">⇢ Ort hinzufügen</Button>
         </Link>
-      </div>
+      </Div>
     </>
   );
 }
