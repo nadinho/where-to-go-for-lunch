@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
 import PageText from '../components/PageText';
@@ -11,9 +11,13 @@ export default function Add() {
   const [fieldKitchen, setFieldKitchen] = React.useState('');
   const [fieldSpecial, setFieldSpecial] = React.useState('');
   const [fieldMoney, setFieldMoney] = React.useState('');
+  const history = useHistory();
+  const [isLoading, setIsLoading] = React.useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
+
+    setIsLoading(true);
 
     const formular = {
       fieldRestaurant: fieldRestaurant,
@@ -23,6 +27,7 @@ export default function Add() {
     };
 
     await postFormular(formular);
+    history.push('/Thanks');
   }
 
   const Form = styled.form`
@@ -280,8 +285,8 @@ export default function Add() {
               }}
             ></MultipleChoices>
             <label>
-              <i class="fas fa-euro-sign"></i>
-              <i class="fas fa-euro-sign"></i>
+              <i className="fas fa-euro-sign"></i>
+              <i className="fas fa-euro-sign"></i>
             </label>
           </ChoicesItem>
           <ChoicesItem>
@@ -296,14 +301,13 @@ export default function Add() {
             ></MultipleChoices>
             <label>
               <i className="fas fa-euro-sign"></i>
-              <i classNames="fas fa-euro-sign"></i>
+              <i className="fas fa-euro-sign"></i>
               <i className="fas fa-euro-sign"></i>
             </label>
           </ChoicesItem>
         </MultipleChoicesBox>
-        <Link to="/thanks">
-          <Button type="submit">⇢ Ab geht's!</Button>
-        </Link>
+
+        <Button disabled={isLoading}>⇢ Ab geht's!</Button>
       </Form>
     </>
   );
