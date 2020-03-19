@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import PageText from '../components/PageText';
 import styled from '@emotion/styled';
 import { postFormular } from '../Api/Formular';
+import Spinner from '../components/Loading';
 
 export default function Add() {
   const [fieldRestaurant, setFieldRestaurant] = React.useState('');
@@ -28,6 +29,18 @@ export default function Add() {
 
     await postFormular(formular);
     history.push('/Thanks');
+  }
+  const Div = styled.div`
+    display: flex;
+    justify-content: center;
+  `;
+
+  if (isLoading) {
+    return (
+      <Div>
+        <Spinner></Spinner>
+      </Div>
+    );
   }
 
   const Form = styled.form`
