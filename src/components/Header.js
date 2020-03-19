@@ -53,11 +53,11 @@ const Slider = styled.span`
   }
 `;
 
-export default function AppHeader({ onToggleClick }) {
+export default function AppHeader({ onToggleThemeClick }) {
   return (
     <Header>
       <Toggle>
-        <ToggleCheckbox type="checkbox" onClick={onToggleClick} />
+        <ToggleCheckbox type="checkbox" onClick={onToggleThemeClick} />
         <Slider></Slider>
       </Toggle>
 
