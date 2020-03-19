@@ -23,7 +23,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Header
-          onToggleClick={() => {
+          onToggleThemeClick={() => {
             setTheme(theme === lightTheme ? darkTheme : lightTheme);
           }}
         ></Header>
