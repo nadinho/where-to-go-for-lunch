@@ -4,6 +4,7 @@ import Title from '../components/Title';
 import Button from '../components/Button';
 import PageText from '../components/PageText';
 import styled from '@emotion/styled';
+import { postFormular } from '../Api/Formular';
 
 export default function Add() {
   const [fieldRestaurant, setFieldRestaurant] = React.useState('');
@@ -21,17 +22,7 @@ export default function Add() {
       fieldMoney: fieldMoney
     };
 
-    const response = await fetch(
-      process.env.REACT_APP_FORMULAR_API || 'http://localhost:4000/formular',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formular)
-      }
-    );
-    await response.json();
+    await postFormular(formular);
   }
 
   const Form = styled.form`
