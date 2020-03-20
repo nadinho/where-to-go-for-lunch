@@ -89,6 +89,7 @@ export default function Add() {
           onChange={event => {
             setFieldRestaurant(event.target.value);
           }}
+          required
         ></InputText>
 
         <Heading>Welche Küche gibt es dort?</Heading>
