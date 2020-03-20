@@ -3,6 +3,7 @@ import { ThemeProvider } from 'emotion-theming';
 
 import GlobalStyles from './Globalstyles';
 import Header from './components/Header';
+
 import Searchbar from './components/Searchbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Thanks from './pages/Thanks';

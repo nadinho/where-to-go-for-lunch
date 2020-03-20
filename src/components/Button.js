@@ -2,11 +2,15 @@ import styled from '@emotion/styled';
 
 const Button = styled.button`
   padding: 10px;
-  background: none;
-  margin-top: 40px;
-  border: 1px solid ${props => props.theme.colors.primary};
+  background: ${props => props.theme.colors.primary};
+
   height: 50px;
-  width: 180px;
+  width: 40%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
   font-size: 1rem;
   cursor: pointer;
   font-family: Rubik;
