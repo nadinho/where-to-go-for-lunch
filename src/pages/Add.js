@@ -1,12 +1,17 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import styled from '@emotion/styled';
+
 import Title from '../components/Title';
 import Button from '../components/Button';
 import PageText from '../components/PageText';
-import styled from '@emotion/styled';
-import { postFormular } from '../Api/Formular';
 import Spinner from '../components/Loading';
 import Div from '../components/Div';
+import Form from '../components/Form';
+import Heading from '../components/Headings';
+import SmallText from '../components/SmallText';
+
+import { postFormular } from '../Api/Formular';
 
 export default function Add() {
   const [fieldRestaurant, setFieldRestaurant] = React.useState('');
@@ -39,28 +44,6 @@ export default function Add() {
       </Div>
     );
   }
-
-  const Form = styled.form`
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  `;
-
-  const FormHeading = styled.p`
-    font-weight: 500;
-    margin-top: 40px;
-    color: ${props => props.theme.colors.primary};
-    &::placeholder {
-      color: #bebdbd;
-    }
-  `;
-
-  const SmallText = styled.p`
-    margin-top: -10px;
-    font-size: small;
-    color: ${props => props.theme.colors.color};
-  `;
 
   const InputText = styled.input`
     height: 50px;
@@ -99,7 +82,7 @@ export default function Add() {
         Community teilst!
       </PageText>
       <Form onSubmit={handleSubmit}>
-        <FormHeading>Wie heißt das Lokal/Restarant/etc.?</FormHeading>
+        <Heading>Wie heißt das Lokal/Restarant/etc.?</Heading>
         <InputText
           placeholder="Name des Ortes"
           value={fieldRestaurant}
@@ -108,7 +91,7 @@ export default function Add() {
           }}
         ></InputText>
 
-        <FormHeading>Welche Küche gibt es dort?</FormHeading>
+        <Heading>Welche Küche gibt es dort?</Heading>
         <SmallText>Mehrfachnennungen möglich</SmallText>
 
         <MultipleChoicesBox>
@@ -190,7 +173,7 @@ export default function Add() {
           </ChoicesItem>
         </MultipleChoicesBox>
 
-        <FormHeading>Besonderheiten</FormHeading>
+        <Heading>Besonderheiten</Heading>
         <SmallText>Mehrfachnennungen möglich</SmallText>
 
         <MultipleChoicesBox>
@@ -268,7 +251,7 @@ export default function Add() {
           </ChoicesItem>
         </MultipleChoicesBox>
 
-        <FormHeading>Wie teuer ist es dort?</FormHeading>
+        <Heading>Wie teuer ist es dort?</Heading>
         <MultipleChoicesBox>
           <ChoicesItem>
             <MultipleChoices
