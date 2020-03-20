@@ -6,8 +6,6 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // justify-content: flex-end;
 `;
 
 const Title = styled.h1`
@@ -16,54 +14,30 @@ const Title = styled.h1`
   color: ${props => props.theme.colors.heading};
 `;
 
-const ToggleCheckbox = styled.input`
-  position: relative;
-  display: inline-block;
-`;
-
-const Toggle = styled.label`
-  background-color: ${props => props.theme.colors.primary};
-  display: inline-block;
-  border-radius: 50px;
+const Toggle = styled.button`
+  background: none;
+  color: ${props => props.theme.colors.primary};
+  border: none;
+  border-radius: 40px;
   cursor: pointer;
-  position: relative;
+  outline: none;
   width: 50px;
-  height: 20px;
-  transition: all 0.4s;
-`;
-
-const Slider = styled.span`
-  background-color: #bc2612;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  transition: all 0.4s;
-  &:before {
-    position: absolute;
-    content: '';
-    width: 18px;
-    height: 14px;
-    left: 2px;
-    top: 2px;
-    background-color: #eee;
-    border-radius: 5px;
-    transition: all 0.4s;
-    &:checked {
-      transform: translateX(40px);
-    }
-  }
+  height: 50px;
+  font-size: 1.8rem;
+  position: relative;
+  top: -50px;
+  right: -20px;
 `;
 
 export default function AppHeader({ onToggleThemeClick }) {
   return (
     <Header>
-      <Toggle>
-        <ToggleCheckbox type="checkbox" onClick={onToggleThemeClick} />
-        <Slider></Slider>
-      </Toggle>
-
       <Title>
         Find the best places <br></br>for your lunch
       </Title>
+      <Toggle onClick={onToggleThemeClick}>
+        <i class="far fa-lightbulb"></i>
+      </Toggle>
     </Header>
   );
 }
