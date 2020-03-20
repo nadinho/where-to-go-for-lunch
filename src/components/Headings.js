@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 const Heading = styled.p`
   font-weight: 500;
   margin-top: 40px;
