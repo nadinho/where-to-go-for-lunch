@@ -2,22 +2,17 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Card = styled.div`
-  margin: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 3px 10px grey;
-  background: ${props => props.theme.colors.card};
+  width: 100%;
+  margin: 20px;
+  background: none;
   display: flex;
   flex-direction: column;
-
-  &:hover {
-    box-shadow: 2px 2px 20px grey;
-  }
 `;
 
 const CardImg = styled.img`
-  border-radius: 15px 15px 0 0;
-  height: 200px;
-  width: 300px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 `;
 
 const CardFooter = styled.div`
@@ -31,15 +26,39 @@ const CardFooter = styled.div`
 
 const FooterName = styled.h3`
   font-weight: 900;
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
   font-size: 1.3rem;
   margin-bottom: 8px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  position: relative;
+  top: -55px;
+  color: ${props => props.theme.colors.primary};
 `;
 
-const FooterText = styled.p`
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -50px;
+  width: 100%;
+  border: 1px dashed ${props => props.theme.colors.primary};
+`;
+
+const Kitchen = styled.p`
   font-size: 0.9rem;
-  line-height: 5px;
+  line-height: 0.2em;
+  text-transform: uppercase;
+`;
+const Special = styled.p`
+  font-size: 0.9rem;
+  text-transform: uppercase;
+`;
+const Price = styled.p`
+  font-size: 1rem;
+  text-transform: uppercase;
 `;
 
 export default function Cards(props) {
@@ -48,9 +67,11 @@ export default function Cards(props) {
       <CardImg src={props.url} alt={props.text}></CardImg>
       <CardFooter>
         <FooterName>{props.name}</FooterName>
-        <FooterText>{props.kitchen}</FooterText>
-        <FooterText>{props.special}</FooterText>
-        <FooterText>{props.price}</FooterText>
+        <Wrapper>
+          <Price>{props.price}</Price>
+          <Kitchen>{props.kitchen}</Kitchen>
+          <Special>{props.special}</Special>
+        </Wrapper>
       </CardFooter>
     </Card>
   );
