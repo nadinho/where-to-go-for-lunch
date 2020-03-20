@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import Button from '../components/Button';
 import Cards from '../components/Cards';
 import Div from '../components/Div';
+import {
+  Container,
+  Link,
+  lightColors,
+  darkColors
+} from 'react-floating-action-button';
 
 export default function Start() {
   return (
@@ -39,10 +44,19 @@ export default function Start() {
           price="€€"
         ></Cards>
         <Button type="text">⇢ Mehr Orte</Button>
-        <Link to="/add">
-          <Button type="text">⇢ Ort hinzufügen</Button>
-        </Link>
       </Div>
+      <Container>
+        <Link
+          href="./add"
+          tooltip="Füge einen Ort hinzu"
+          icon="fas fa-plus"
+          rotate={true}
+          styles={{
+            backgroundColor: darkColors.orange,
+            color: lightColors.white
+          }}
+        ></Link>
+      </Container>
     </>
   );
 }
