@@ -49,7 +49,7 @@ export default function Add() {
     height: 50px;
     width: 220px;
     outline: none;
-    border: 1px solid ${props => props.theme.colors.input};
+    border: none;
     border-radius: 40px;
     box-shadow: 0px 3px 6px #ddd;
     font-size: 0.9rem;
@@ -63,7 +63,7 @@ export default function Add() {
     flex-wrap: wrap;
     align-items: center;
     width: 80%;
-    color: ${props => props.theme.colors.color};
+    color: ${props => props.theme.colors.textPrimary};
   `;
 
   const ChoicesItem = styled.li`

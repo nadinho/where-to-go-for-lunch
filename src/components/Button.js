@@ -11,6 +11,6 @@ const Button = styled.button`
   cursor: pointer;
   font-family: Rubik;
   font-weight: 500;
-  color: ${props => props.theme.colors.color};
+  color: ${props => props.theme.colors.textPrimary};
 `;
 export default Button;

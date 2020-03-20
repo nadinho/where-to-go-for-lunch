@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 
-const PageTitle = styled.h2(
-  `
+const PageTitle = styled.h2`
   font-size: 1.5rem;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.heading};
   font-weight: 900;
   &::after {
     content: '';
@@ -11,11 +10,9 @@ const PageTitle = styled.h2(
     height: 5px;
     display: block;
     width: 80px;
-    background: #dcb042;
+    background: ${props => props.theme.colors.primary};
     border-right: 1px white;
   }
-`,
-  props => ({ ...props })
-);
+`;
 
 export default PageTitle;

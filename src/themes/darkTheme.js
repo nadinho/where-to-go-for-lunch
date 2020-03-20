@@ -1,14 +1,11 @@
 const darkTheme = {
   colors: {
-    primary: '#dcb042',
-    secondary: '#cb042',
-    background: '#121212',
-    color: '#fff',
-    text: '#fef',
-    darkGrey: '#a9a9a9',
-    lightGrey: '#bebdbd',
-    input: '#fff',
-    heading: '#dcb042'
+    primary: '#954CF2',
+    background: '#1a1a1a',
+    card: '#2D1B36',
+    textPrimary: '#fff',
+    textSecondary: 'fff',
+    heading: '#f9f9f9'
   }
 };
 
