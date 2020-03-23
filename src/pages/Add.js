@@ -13,6 +13,35 @@ import SmallText from '../components/SmallText';
 
 import { postFormular } from '../Api/Formular';
 
+const InputText = styled.input`
+  height: 50px;
+  width: 220px;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 3px 6px #ddd;
+  font-size: 0.9rem;
+  text-align: center;
+`;
+
+const MultipleChoicesBox = styled.ul`
+  margin-top: -5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
+const ChoicesItem = styled.li`
+  padding: 10px;
+`;
+
+const MultipleChoices = styled.input`
+  margin: 15px;
+`;
+
 export default function Add() {
   const [fieldRestaurant, setFieldRestaurant] = React.useState('');
   const [fieldKitchen, setFieldKitchen] = React.useState('');
@@ -44,35 +73,6 @@ export default function Add() {
       </Div>
     );
   }
-
-  const InputText = styled.input`
-    height: 50px;
-    width: 220px;
-    outline: none;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0px 3px 6px #ddd;
-    font-size: 0.9rem;
-    text-align: center;
-  `;
-
-  const MultipleChoicesBox = styled.ul`
-    margin-top: -5px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 80%;
-    color: ${props => props.theme.colors.textPrimary};
-  `;
-
-  const ChoicesItem = styled.li`
-    padding: 10px;
-  `;
-
-  const MultipleChoices = styled.input`
-    margin: 15px;
-  `;
 
   return (
     <>
